@@ -1,0 +1,11 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 30px;
+}
+
+.link {
+    padding-left: 20px;
+
+}

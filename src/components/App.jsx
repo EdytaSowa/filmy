@@ -1,9 +1,13 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
 
 import { Movies } from '../pages/Movies';
 import { NotFound } from '../pages/NotFound';
 import { Home } from '../pages/Home';
 import { MovieDetails } from './MovieDetails/MovieDetails';
+import { Reviews } from './Reviews/Reviews';
+import { Cast } from './Cast/Cast';
+import { SharedLayout } from './SharedLayout/SharedLayout ';
 
 export const App = () => {
   return (
@@ -11,22 +15,32 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
+        gap: '30px',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-        <nav>
-        <Link to="/">Home</Link>
-        <Link to="/movies">Movies</Link>
-      </nav>
+    
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:movieId" element={<MovieDetails />} /> 
+      <Route path="/" element={<SharedLayout />}>
+        
+        
+        
+        <Route index element={<Home />} />
+        <Route path="/:movieId" element={<MovieDetails />} />
         <Route path="/movies" element={<Movies />} />
-        <Route path="/movies/:movieId" element={<MovieDetails />} /> 
+        <Route path="/movies/:movieId" element={<MovieDetails />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
+        </Route>
+        
         <Route path="*" element={<NotFound />} />
+        
+         </Route>
+        
       </Routes>
     </div>
   );

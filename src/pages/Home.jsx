@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getTrending } from "components/api/api";
-import { RenderList } from "components/RenderList/RenderList";
+import { RenderHomeMovies } from "components/RenderHomeMovies/RenderHomeMovies";
 
 export const Home = () => {
 
@@ -11,7 +11,8 @@ export const Home = () => {
   return (
 
   <div>
-     <RenderList movies={ movies }/>
+     <p> <b>Trending today</b></p>
+     <RenderHomeMovies path={'movies/'} movies={ movies } />
     </div>
   );
 };
