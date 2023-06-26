@@ -1,7 +1,7 @@
 import { getMovieDetails } from 'components/api/api';
 import { useParams } from 'react-router-dom';
 import { useState, useRef } from 'react';
-// import { GoBackBtn } from 'components/GoBackBtn/GoBackBtn';
+
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 export const MovieDetails = () => {
@@ -14,6 +14,7 @@ export const MovieDetails = () => {
 
  
   getMovieDetails(movieId).then(data => setDetails(data));
+ 
 
   return (
     <div>
