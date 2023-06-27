@@ -5,6 +5,8 @@ import css from './MovieDetails.module.css';
 
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
+import { BackLink } from 'components/BackLink/BackLink';
+
  const MovieDetails = () => {
   const [details, setDetails] = useState([]);
   const { movieId } = useParams();
@@ -13,15 +15,19 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 
   const backLinkHref = useRef(location.state?.from ?? '/');
 
+  // const backLinkHref = location.state?.from ?? "/";
+
   getMovieDetails(movieId).then(data => setDetails(data));
 
   return (
     <div className={css.wrapper}>
       <div>
-        
+
+      <BackLink to={backLinkHref.current}>Go back</BackLink>
+{/*         
         <button className={css.btn}>
           <Link to={backLinkHref.current}>Go back</Link>
-        </button>
+        </button> */}
         {details.poster_path ? (
           <img
             className={css.img}

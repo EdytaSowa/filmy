@@ -2,8 +2,10 @@ import  {RenderList} from 'components/RenderList/RenderList';
 import { searchMovies } from 'components/api/api';
 import { useState } from 'react';
 
+
  const Movies = () => {
   const [movies, setMovies] = useState([]);
+  // const location = useLocation();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -20,7 +22,7 @@ import { useState } from 'react';
         <input name="search" type="text" />
         <button type="submit">Search</button>
       </form> 
-      <RenderList movies={ movies }/>
+      <RenderList movies={ movies } />
     </div>
   );
 };
