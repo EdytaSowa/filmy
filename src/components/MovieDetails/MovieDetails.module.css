@@ -6,10 +6,10 @@
 }
 
 .btn {
-
     width: 150px;
     padding-block: 5px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .img {

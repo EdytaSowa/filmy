@@ -3,21 +3,12 @@ import { lazy } from 'react';
 
 import { SharedLayout } from './SharedLayout/SharedLayout ';
 
-
-// import { Movies } from '../pages/Movies';
-const Movies = lazy(()=> import('../pages/Movies'))
-// import { NotFound } from '../pages/NotFound';
-const NotFound = lazy(()=> import('../pages/NotFound'))
-// import { Home } from '../pages/Home';
-const Home = lazy(() => import("../pages/Home"));
-
-const MovieDetails = lazy(()=>import('./MovieDetails/MovieDetails'))
-// import { MovieDetails } from './MovieDetails/MovieDetails';
-const Reviews = lazy(()=> import('./Reviews/Reviews'))
-// import { Reviews } from './Reviews/Reviews';
-
-const Cast = lazy(()=> import('./Cast/Cast'))
-// import { Cast } from './Cast/Cast';
+const Movies = lazy(() => import('../pages/Movies'));
+const NotFound = lazy(() => import('../pages/NotFound'));
+const Home = lazy(() => import('../pages/Home'));
+const MovieDetails = lazy(() => import('./MovieDetails/MovieDetails'));
+const Reviews = lazy(() => import('./Reviews/Reviews'));
+const Cast = lazy(() => import('./Cast/Cast'));
 
 export const App = () => {
   return (

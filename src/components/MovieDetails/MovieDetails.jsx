@@ -18,7 +18,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
   return (
     <div className={css.wrapper}>
       <div>
-        {' '}
+        
         <button className={css.btn}>
           <Link to={backLinkHref.current}>Go back</Link>
         </button>

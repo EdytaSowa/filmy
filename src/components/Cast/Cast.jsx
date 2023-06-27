@@ -10,8 +10,11 @@ import css from './Cast.module.css'
   getMovieCredits(movieId).then(data => setCast(data));
 
   return (
+
     <ul className={css.list}>
-      {cast.map(actor => (
+
+      {cast.length > 0 ? (
+      cast.map(actor => (
         <li className={css.actor} key={actor.id}>
           {actor.profile_path ? (
             <img className={css.image}
@@ -25,7 +28,8 @@ import css from './Cast.module.css'
           <p> {actor.name}</p>
           <p><b>Character:</b> {actor.character}</p>
         </li>
-      ))}
+      ))) : <p>Brak aktorów</p>}
+
     </ul>
   );
 };
