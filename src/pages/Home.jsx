@@ -11,7 +11,7 @@ export const Home = () => {
   return (
 
   <div>
-     <p> <b>Trending today</b></p>
+      <h4>Trending today</h4>
      <RenderHomeMovies path={'movies/'} movies={ movies } />
     </div>
   );

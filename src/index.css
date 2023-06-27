@@ -20,6 +20,20 @@ img {
   height: 190px;
 }
 
+p,
+li,
+ul,
+h1,
+h2,
+h4,
+h5,
+h6,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 p {
   margin:0;
 }

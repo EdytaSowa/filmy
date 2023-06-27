@@ -1,26 +1,28 @@
-import {getMovieReviews} from 'components/api/api'
-
+import { getMovieReviews } from 'components/api/api';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
+import css from './Reviews.module.css';
 
 export const Reviews = () => {
-
-    const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
 
-  getMovieReviews(movieId).then(data => setReviews(data))
-
+  getMovieReviews(movieId).then(data => setReviews(data));
 
   return (
-    <div>
-
-      {reviews.length > 0 ? reviews.map(review => (
-          <li key={review.id}> <p>{review.author}</p>{review.content}</li>
-        )): <p>Brak recencji</p>}
-
-      
-
-    </div>
-  )
-
-}
+    <ul className={css.list}>
+      {reviews.length > 0 ? (
+        reviews.map(review => (
+          <li className={css.review} key={review.id}>
+            {' '}
+            <p className={css.author}><b>{review.author}</b></p>
+            {review.content}
+           
+          </li>
+        ))
+      ) : (
+        <p>Brak recencji</p>
+      )}
+    </ul>
+  );
+};

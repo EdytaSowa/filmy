@@ -17,7 +17,8 @@ export const App = () => {
         display: 'flex',
         flexDirection: 'column',
         gap: '30px',
-        justifyContent: 'center',
+        // justifyContent: 'center',
+        paddingTop: "30px",
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
@@ -27,7 +28,7 @@ export const App = () => {
       <Routes>
       <Route path="/" element={<SharedLayout />}>
         
-        
+    
         
         <Route index element={<Home />} />
         <Route path="/:movieId" element={<MovieDetails />} />
