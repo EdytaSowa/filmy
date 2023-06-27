@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/805.e1fb348d.chunk.js","mappings":"0JASA,UATkB,WAEd,OACI,0BACI,uBAAG,iDAGd,C","sources":["pages/NotFound.jsx"],"sourcesContent":[" const NotFound = () => {\n\n    return (\n        <div>\n            <p> We are sorry, we couldn't find that movie </p>\n        </div>\n    )\n}\n\nexport default NotFound;"],"names":[],"sourceRoot":""}
