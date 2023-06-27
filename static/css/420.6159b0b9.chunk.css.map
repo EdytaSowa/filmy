@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/420.6159b0b9.chunk.css","mappings":"AAAA,wBACI,eAAgB,CAChB,eACH,CAEA,yBACA,cAAe,CACf,iBAEA","sources":["components/RenderList/RenderList.module.css"],"sourcesContent":[".list {\n    list-style: none;\n    margin-top: 15px;\n }\n \n .movie {\n font-size: 15px;\n padding-block: 5px;\n \n }"],"names":[],"sourceRoot":""}
