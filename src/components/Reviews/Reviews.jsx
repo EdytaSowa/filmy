@@ -28,3 +28,24 @@ import css from './Reviews.module.css';
 };
 
 export default Reviews;
+
+
+
+
+
+
+
+
+
+// const handleSubmit = e => {
+//   setSearchParams({ query: e.target[0].value });
+//   e.preventDefault();
+//   return;
+// };
+
+// useEffect(() => {
+//   const movieTitle = searchParams.get('query');
+//   if (movieTitle) {
+//     API.searchMovies(movieTitle).then(ret => setMovies(ret));
+//   }
+// }, [searchParams]);
