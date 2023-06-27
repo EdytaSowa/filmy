@@ -2,7 +2,7 @@ import  {RenderList} from 'components/RenderList/RenderList';
 import { searchMovies } from 'components/api/api';
 import { useState } from 'react';
 
-export const Movies = () => {
+ const Movies = () => {
   const [movies, setMovies] = useState([]);
 
   const handleSubmit = e => {
@@ -24,3 +24,6 @@ export const Movies = () => {
     </div>
   );
 };
+
+
+export default Movies;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { getTrending } from "components/api/api";
 import { RenderHomeMovies } from "components/RenderHomeMovies/RenderHomeMovies";
 
-export const Home = () => {
+const Home = () => {
 
   const [movies, setMovies] = useState([]);
 
@@ -16,3 +16,6 @@ export const Home = () => {
     </div>
   );
 };
+
+
+export default Home;

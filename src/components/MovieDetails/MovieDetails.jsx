@@ -5,7 +5,7 @@ import css from './MovieDetails.module.css';
 
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
-export const MovieDetails = () => {
+ const MovieDetails = () => {
   const [details, setDetails] = useState([]);
   const { movieId } = useParams();
 
@@ -71,3 +71,5 @@ export const MovieDetails = () => {
     </div>
   );
 };
+
+export default MovieDetails;
