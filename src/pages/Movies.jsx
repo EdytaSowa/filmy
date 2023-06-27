@@ -1,6 +1,6 @@
 import  {RenderList} from 'components/RenderList/RenderList';
 import { searchMovies } from 'components/api/api';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 
@@ -11,14 +11,20 @@ import { useSearchParams } from 'react-router-dom';
 
   const handleSubmit = e => {
     e.preventDefault();
-    setSearchParams({query: e.target.elements.search.value})
-    const movieTitle = searchParams.get('query');
-    if (movieTitle) {searchMovies(movieTitle).then(data => setMovies(data));}
+    setSearchParams({query: e.target.elements.search.value});
+    return;
+    // const movieTitle = searchParams.get('query');
+    // if (movieTitle) {searchMovies(movieTitle).then(data => setMovies(data));}
     // const searchValue = e.target.elements.search.value;
     
     //  searchMovies(searchValue).then(data => setMovies(data));
-     
   };
+useEffect(() => {
+  const movieTitle = searchParams.get('query');
+  if (movieTitle) {searchMovies(movieTitle).then(data => setMovies(data));
+  }
+}, [searchParams]);
+ 
 
   return (
     <div>
